@@ -2,8 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<img width="1266" alt="portfolio image" src="../personal-portfolio/src/assets/img/protfolio-image.png">
-
 ## Built Using
 
 - **Front-end library:** React
