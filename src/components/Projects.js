@@ -14,7 +14,7 @@ export const Projects = () => {
       title: "Portfolio",
       description: "A personal portfolio website built using React and JavaScript to showcase my projects and skills.",
       imgUrl: projImg1,
-      url: "https://github.com/ashokbob9989/Portfolio"
+      url: "https://github.com/ashokbob9989/ashok-portfolio/"
     },
     {
       title: "Library Management System",
