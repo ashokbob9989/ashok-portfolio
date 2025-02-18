@@ -28,11 +28,6 @@ export const Newsletter = () => {
     setDislikes(dislikes + 1);
   };
 
-  const clearFields = () => {
-    setLikes(0);
-    setDislikes(0);
-  };
-
   return (
     <Col lg={12}>
       <div className="newsletter-bx wow slideInUp">

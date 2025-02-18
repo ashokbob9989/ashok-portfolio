@@ -47,8 +47,10 @@ export const Education = () => {
       });
     });
 
+    const currentChartRefs = chartRefs.current;
+
     return () => {
-      chartRefs.current.forEach(chart => {
+      currentChartRefs.forEach(chart => {
         if (chart) {
           chart.destroy();
         }
