@@ -9,8 +9,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [setIndex] = useState(1);
-  const period = 10;
+  const period = 2000;
 
   const toRotate = useMemo(() => ["Full Stack Developer", "Competitive Programmer", "Tech Enthusiast"], []);
 
@@ -27,17 +26,15 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
     } else {
-      setIndex(prevIndex => prevIndex + 1);
+      setDelta(300 - Math.random() * 100);
     }
-  }, [isDeleting, loopNum, text.length, toRotate, period, setIndex]);
+  }, [isDeleting, loopNum, text.length, toRotate, period]);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -56,7 +53,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Ashok`} <br/><span className="txt-rotate" dataperiod="10" data-rotate='[ "Full Stack Developer", "Competitive Programmer", "Tech Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Ashok`} <br/><span className="txt-rotate" dataperiod="2000" data-rotate='[ "Full Stack Developer", "Competitive Programmer", "Tech Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Dear Esteemed Visitor,</p>
                   <p>
                     I extend a warm welcome to you as you explore my portfolio. It is a curated collection of my
