@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 
 export const Newsletter = () => {
-  const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  const [likes, setLikes] = useState(() => {
+    const savedLikes = localStorage.getItem('likes');
+    return savedLikes ? JSON.parse(savedLikes) : 0;
+  });
+
+  const [dislikes, setDislikes] = useState(() => {
+    const savedDislikes = localStorage.getItem('dislikes');
+    return savedDislikes ? JSON.parse(savedDislikes) : 0;
+  });
 
   useEffect(() => {
     localStorage.setItem('likes', JSON.stringify(likes));
