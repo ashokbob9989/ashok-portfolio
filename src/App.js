@@ -9,8 +9,12 @@ import { Footer } from "./components/Footer";
 import {About} from "./components/About";
 import { Education } from './components/Education';
 import { Experience } from './components/Experience';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    document.title = "Ashok's Portfolio";
+  }, []);
   return (
     <div className="App">
       <NavBar />
