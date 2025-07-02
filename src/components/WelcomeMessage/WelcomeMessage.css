@@ -1,0 +1,75 @@
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-message h1 {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    background: #1a1a1a;
+}
+
+.welcome-bottom {
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 30px;
+    line-height: 40px;
+}
+
+.timer {
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    transition: width 0.1s linear;
+    max-width: 300px;
+    position: relative;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.profile-mask-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.base-image,
+.mask-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 2px dashed white;
+}
+
+.base-image {
+    z-index: 1;
+}
+
+.mask-image {
+    z-index: 0;
+}
+
+
+.welcome-message .footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-weight: normal;
+}

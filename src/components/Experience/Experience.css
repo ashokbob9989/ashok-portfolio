@@ -1,0 +1,54 @@
+.experience{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.experience-card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+    word-break: break-word;
+    white-space: normal;
+    color: black;
+    position: relative;
+    margin: 50px;
+    h4{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        position: relative;
+        top: 0px;
+        margin: auto;
+        z-index: 100;
+    }
+
+    p{
+        margin: auto;
+        font-size: 15px;
+        padding: 50px;
+        background-color: rgb(233,233,233);
+        position: relative;
+    }
+
+    ul{
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0px; 
+        margin:0px;
+        position: relative;
+        bottom: 0px;
+        word-break: break-word;
+        white-space: normal;
+        li{
+            list-style: none;
+            background-color: rgb(133, 133, 133);
+            color: white;
+            padding: 10px;
+            margin-left: 50px;
+        }
+    }
+}

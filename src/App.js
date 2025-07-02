@@ -1,31 +1,47 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import {About} from "./components/About";
-import { Education } from './components/Education';
-import { Experience } from './components/Experience';
-import { useEffect } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Education from './components/Education/Education';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Experience from './components/Experience/Experience';
+import Newsletter from './components/Newsletter/Newsletter';
+import Footer from './components/Footer/Footer';
+import { useEffect, useState } from 'react';
+import WelcomeMessage from './components/WelcomeMessage/WelcomeMessage';
 
 function App() {
-  useEffect(() => {
-    document.title = "Ashok's Portfolio";
+
+  const [showWelcomeMessage, setShowWelcomeMessage] = useState(true);
+
+  useEffect(()=>{
+
+    const handleWelcomeMessage=async()=>{
+      setShowWelcomeMessage(false);
+    }
+
+    
+    setTimeout(()=>{
+      (async()=>handleWelcomeMessage())();
+    }, 0);
   }, []);
+
   return (
-    <div className="App">
-      <NavBar />
-      <Banner />
-      <About/>
-      <Education/>
-      <Skills />
-      <Projects />
-      <Experience/>
-      <Contact />
-      <Footer />
+    <div className='app'>
+      {!showWelcomeMessage ? (
+        <div className='other-components'>
+          <Navbar />
+          <Hero />
+          <Education />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Newsletter />
+          <Footer />
+        </div>
+      ) : (
+        <WelcomeMessage />
+      )}
     </div>
   );
 }

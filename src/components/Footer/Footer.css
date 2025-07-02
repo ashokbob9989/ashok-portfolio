@@ -1,0 +1,36 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    hr{
+        width: 300px;
+    }
+}
+
+.up-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    color: white;
+    padding: 30px;
+    ul{
+        display: flex;
+        gap: 30px;
+        li{
+            list-style: none;
+             &:hover{
+                cursor: pointer;
+                color: purple;
+            }
+        }
+    }
+}
+
+.down-footer{
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

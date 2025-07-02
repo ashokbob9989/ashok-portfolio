@@ -1,0 +1,50 @@
+.navbar {
+    background-color: black;
+    padding: 20px;
+    position: relative;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8px;
+    background: linear-gradient(to right, white, black);
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8px;
+    background: linear-gradient(to left, white, black);
+}
+
+.navbar-lists ul {
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-lists ul li {
+    list-style: none;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}

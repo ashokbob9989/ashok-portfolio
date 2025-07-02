@@ -1,0 +1,92 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    overflow: hidden;
+    flex-basis: 45%;
+    /* to tell how much it has to occupy ...*/
+    box-sizing: border-box;
+}
+
+.project-title {
+    background-color: black;
+    padding: 10px;
+
+    &:hover {
+        background-color: rgb(255, 143, 143);
+        color: black;
+        cursor: pointer;
+    }
+
+    h2 {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        word-break: break-word;
+        white-space: normal;
+        color: white;
+    }
+
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+}
+
+.project-highligts {
+    background-color: rgb(233, 233, 233);
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px;
+    word-break: break-word;
+    white-space: normal;
+
+    &:hover {
+        background-color: rgb(255, 143, 143);
+        color: black;
+    }
+}
+
+.project-tech-stacks {
+    background-color: rgb(233, 233, 233);
+
+    ul {
+        display: flex;
+        padding: 0px;
+        gap: 15px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        li {
+            list-style: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .project-card{
+        flex-basis: 90%;
+    }
+}

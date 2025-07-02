@@ -1,0 +1,41 @@
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    ul{
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        background-color: rgb(233,233,233);
+        padding: 50px;
+        margin: 30px;
+        
+        li{
+            list-style: none;
+            border: 2px solid black;
+            padding: 15px;
+            &:hover{
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    h3{
+        border: 2px solid black;
+        padding: 15px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 0px;
+        left:0px;
+    }
+}
