@@ -11,6 +11,7 @@
 
     ul{
         display: flex;
+        flex-direction: row;
         overflow: hidden;
         flex-wrap: wrap;
         background-color: rgb(233,233,233);
