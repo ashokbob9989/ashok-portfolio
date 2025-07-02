@@ -1,6 +1,4 @@
 import './Footer.css';
-import { Facebook, Github, Instagram, Linkedin, Twitter } from 'react-bootstrap-icons';
-import { FaMailBulk } from 'react-icons/fa';
 import socialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
 
 const Footer = () => {
