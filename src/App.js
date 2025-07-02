@@ -23,7 +23,7 @@ function App() {
     
     setTimeout(()=>{
       (async()=>handleWelcomeMessage())();
-    }, 0);
+    }, 5000);
   }, []);
 
   return (
